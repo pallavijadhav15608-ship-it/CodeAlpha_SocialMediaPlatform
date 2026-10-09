@@ -1,0 +1,178 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    color: #1c1e21;
+    line-height: 1.5;
+}
+
+.navbar {
+    background: #ffffff;
+    padding: 16px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.navbar h1 {
+    color: #4267b2;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+button {
+    background: #4267b2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #304f91;
+}
+
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 0 18px;
+}
+
+.welcome {
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.welcome h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.card,
+.post {
+    background: white;
+    padding: 22px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card h2,
+#feedSection h2 {
+    margin-bottom: 15px;
+}
+
+textarea,
+input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccd0d5;
+    border-radius: 7px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.post-content {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin: 15px 0;
+}
+
+.post-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.post-actions button {
+    background: #e7f0ff;
+    color: #2455a4;
+}
+
+.post-actions button:hover {
+    background: #d5e5ff;
+}
+
+.comment {
+    background: #f0f2f5;
+    border-radius: 7px;
+    padding: 10px;
+    margin-top: 8px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 10;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 28px;
+    border-radius: 12px;
+}
+
+.modal-content h2 {
+    margin-bottom: 18px;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #eeeeee;
+    color: #222222;
+    padding: 5px 10px;
+}
+
+#userStatus {
+    font-size: 14px;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .welcome h2 {
+        font-size: 24px;
+    }
+}

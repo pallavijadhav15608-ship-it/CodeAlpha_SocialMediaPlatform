@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectHub - Social Media</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>ConnectHub</h1>
+        <nav>
+            <button onclick="showFeed()">Home</button>
+            <button onclick="showProfile()">My Profile</button>
+            <button onclick="showLogin()">Login</button>
+            <button onclick="showRegister()">Register</button>
+            <button onclick="logoutUser()">Logout</button>
+        </nav>
+        <span id="userStatus">Welcome, Guest!</span>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <h2>Share your world 🌎</h2>
+            <p>Connect with people and share what's on your mind.</p>
+        </section>
+
+        <section id="createPost" class="card">
+            <h2>Create a Post</h2>
+            <textarea id="postContent" placeholder="What's on your mind?" maxlength="1000"></textarea>
+            <button onclick="createPost()">Publish Post</button>
+        </section>
+
+        <section id="profileSection" class="card" style="display:none">
+            <h2>My Profile</h2>
+            <p id="profileName"></p>
+            <p id="profileEmail"></p>
+            <label for="profileBio">Bio</label>
+            <textarea id="profileBio" maxlength="250" placeholder="Tell us about yourself"></textarea>
+            <button onclick="saveBio()">Save Bio</button>
+        </section>
+
+        <section id="feedSection">
+            <h2>Community Feed</h2>
+            <div id="posts">
+                <p>Loading posts...</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="registerBox" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closeModals()">✕</button>
+            <h2>Create Account</h2>
+            <input id="registerName" placeholder="Full name" maxlength="80">
+            <input id="registerEmail" type="email" placeholder="Email address">
+            <input id="registerPassword" type="password" placeholder="Password" minlength="8">
+            <button onclick="registerUser()">Register</button>
+        </div>
+    </div>
+
+    <div id="loginBox" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closeModals()">✕</button>
+            <h2>Welcome Back</h2>
+            <input id="loginEmail" type="email" placeholder="Email address">
+            <input id="loginPassword" type="password" placeholder="Password">
+            <button onclick="loginUser()">Login</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
